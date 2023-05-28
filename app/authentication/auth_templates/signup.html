@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!-- Form content -->
+    <main class="container p-5 mt-5">
+        <div class="row">
+            <aside class="col-12 col-md-6">
+                <h2 class="text text-start text-dark">Create Your Account</h2>
+                {% include 'forms.html' %}
+            </aside>
+        </div>
+        <div class="sign-here">
+            <p>If you already have an account, please  <a href="{{ url_for('auth.signin') }}" class="sign-link">  sign in.</a></p>
+         </div>
+    </main>
+
+    <footer>
+        <div class="copyright-sign">
+            <p class="foot-text">&copy; 2023 Whiskey Collection</p>
+        </div> 
+    </footer>
+{% endblock %}

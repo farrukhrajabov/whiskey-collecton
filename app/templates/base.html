@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<script src="https://kit.fontawesome.com/584edc9211.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="../static/css/main.css">
+<title>Whisky Collection</title>
+</head>
+<body>
+    <nav>
+        <nav class="container">
+            <div class="social">
+                <div class="media"><a href="https://www.facebook.com/"  target="_blank" rel="noopener noreferrer" alt="Facebook"><i class="fa-brands fa-facebook"></i></a></div>
+                <div class="media"><a href="https://www.instagram.com/"  target="_blank" rel="noopener noreferrer" alt="Instagram"><i class="fa-brands fa-instagram"></i></a></div>
+                <div class="media"><a href="https://twitter.com/"  target="_blank" rel="noopener noreferrer" alt="Twitter"><i class="fa-brands fa-twitter"></i></a></div>
+                <div class="media"><a href="https://https://www.linkedin.com//"  target="_blank" rel="noopener noreferrer" alt="Linkedin"><i class="fa-brands fa-linkedin"></i></a></div>
+            </div>
+            <a href="{{ url_for('site.home') }}" class="navbar-name">Whisky Collection</a>
+            <div class="navbar-list">
+                <ul>
+                    <li class="nav-item">
+                        <a href="{{ url_for('site.home') }}" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('site.profile') }}" class="nav-link">Profile</a>
+                    </li>
+                    {% if current_user.is_authenticated %}
+                    <li class="nav-item">
+                        <a href="{{ url_for('auth.logout') }}" class="nav-link">Logout</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a href="{{ url_for('auth.signin') }}" class="nav-link">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{{ url_for('auth.signup') }}" class="nav-link">Sign Up</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </nav>
+    </nav>
+{% block content %}
+{% endblock %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/js/bootstrap.min.js"></script>
+</body>
+</html>

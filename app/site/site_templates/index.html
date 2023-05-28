@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ <!-- Home -->
+<section class="main">
+    <div>
+         <img src="../../static/images/umur-batur-kocak-l8RuMwiIxmk-unsplash.jpg" class="background" alt="">
+    </div>
+    <h1 class="main-text">Welcome to My Whiskey World!
+    </h1>  
+</section>
+
+ <!-- About me -->
+ <section class="about-me" id="about">
+    <h2 class="about-head">My Biography</h2>
+    <div class="photo-section">
+        <div class="photo-container">
+            <img src="../../static/images/IMG_3751.jpeg" alt="My Photo" class="my-photo">
+        </div> 
+        <div class="text-container">
+            <p>I am Farrukh Rajabov. I was born in 2002 in Tajikistan.After graduation 
+                I immigrated to the United States. 
+                I have  been  living in United States since 2019. Firstly, until August 2022 I used to reside in New Jersey, where I spent three years of my life.
+                Then I moved to Austin, Texas. Currenntly, I work for Accenture. My job title is content specialist. Recently I joined Coding Temple to become a professional software engineer.
+                I speak five languages that are English, Russian, Turkish, Tajik and Uzbek.
+            </p>
+        </div>
+    </div> 
+    
+    <div class="click">
+       <h3 > If you want to see my whisky collection click here <a href="{{ url_for('site.profile') }}">here</a> , and please  <a href="{{ url_for('auth.signin') }}">sign in</a>  as I need some info about you too!</h3>
+    </div>
+</section>
+
+<footer>
+    <div class="footport">
+        <div class="contact" id="info">
+            <div class="footport-head">
+                <h4>Info</h4>   
+            </div>
+            <div class="email">
+                <p class="port-text"><i class="far fa-envelope"></i> Email: whiskycollection@gmail.com</p>
+            </div>
+            <div class="phone">
+                <p class="port-text"><i class="fas fa-mobile"></i> Phone:(551)-295-9634</p>
+            </div>
+            <div class="whatsapp">
+                <p class="port-"><i class="fa-brands fa-whatsapp"></i> Whatsapp:(551)-295-9634</p>
+            </div>
+            <div class="viber">
+                <p class="port-text"><i class="fa-brands fa-whatsapp"></i> Viber:(551)-295-9634</p>
+            </div>
+        </div>
+        <div class="top-whiskeys">
+            <div class="footport-head">
+                <h4>Top Whiskeys</h4>
+            </div>
+            <div class="companies">
+                <a href="https://www.jackdaniels.com/" target="_blank"><p class="port-text">Jack Daniels</p></a>
+            </div>
+            <div class="companies">
+                <a href="https://www.jimbeam.com/en/" target="_blank"><p class="port-text">Jim Beam </p></a>
+            </div>
+            <div class="companies">
+                <a href="https://www.monkeyshoulder.com/en-us" target="_blank"><p class="port-text">Monkey Shoulder</p></a>
+            </div>
+            <div class="companies">
+                <a href="https://www.knobcreek.com/" target="_blank"><p class="port-text"></p>Knob Greek</a>
+            </div> 
+        </div>
+        <div class="helpful-websites">
+            <div class="footport-head">
+                <h4>Helpful Websites</h4>
+            </div>
+            <div class="websites">
+                <a href="https://www.sothebys.com/en/articles/guide-to-starting-your-whisky-collection" target="_blank"><p class="port-text">Sothesby's</p></a>
+            </div> 
+            <div class="websites">
+                <a href="https://www.thebalvenie.com/our-whisky-collection/" target="_blank"><p class="port-text">The Balvenie</p></a>
+            </div> 
+            <div class="websites">
+                <a href="https://hiconsumption.com/how-to-start-a-whiskey-collection/"><p class="port-text">Hiconsumption</p></a>
+            </div>  
+            <div class="websites">
+                <a href="https://www.christies.com/features/Collecting-Guide-to-single-malt-Scotch-and-Japanese-whiskies-9856-1.aspx"><p class="port-text">Christies</p></a>
+            </div> 
+
+        </div>
+        
+    </div>
+    <div class="copyright">
+        <p class="foot-text">&copy; 2023 Whiskey Collection</p>
+    </div> 
+
+</footer>
+
+
+
+
+
+
+
+
+</body>
+</html>
+{% endblock %}
